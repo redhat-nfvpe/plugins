@@ -1,30 +1,11 @@
 language: go
 sudo: required
 dist: trusty
-go:
-- 1.10.x
-- 1.11.x
 env:
   global:
   - PATH=$GOROOT/bin:$GOPATH/bin:$PATH
   - secure: bO/jmb7vzeq31nV2384xM1gIqUPXeobwXgQvn+O/+nHuJi+WWg+xyxLVLbAodSpO29NDR1dFr5aGJrVDs6spXbdZEmhhrCDwITQeJW+e+n5I/ps6rvaqmbUQQfeLqwHJDuyu9BSYqGLtMhnkCrNNRb3rCPqjcwArYeahb05VPVMNpszEq8EPl+Xzf94MUaTrs7GLTzbcoY0NcHTJtb/7fyJ4/V/Vg3Ue0KbhMD1OxZJdmII9xkXkkdmvxESw3/BeYdwktNr1+uWIB1LtMfHvFHIRgsA2dhuJ4xbl2IsCpHUfHFetPXV65pfW+3IMfphoITcjhk9/GvhLIOSB2YNDkyYsNJn2hU/ue2xUCO81+Xi97htob/5Lk1qD6Cj17lyp3YGFKfk7eWQu7CHH0JnFhNc8oLijEaIkYYrNN6BVVURRr6Vl9PNUqSLtI+2b5t/nfz2fBuo7BhJzlE8lzh2CK197oWGJ1eW+3aqAl8ZwOzI7oRXzKrxyCHWMwOuRv/74ADO4e+sIBHji3Tg3966uvUkVdxPeq02t2jmdiyB2IkxhemvvHuzWKk7KwnxTTPhexGmLUULqyZmcLm/Pb3GslUYx9/Uidi5Kt3UhWhhHVbqrxrh1cFC5vWZx0MFS0Mf5CUZ5FFGLO9nwcZU44xs4glAE/REgJWmGg0mG4vNAr64=
   - secure: fldmMUmN7vFNKmum3chQf8b8Hni9v8F/NQZm9StkKh9d+gSgeswvZf2eONS2x22XwNX9rP3/WC8Mm19wYANKfQry+f+Hlop9mCERYz/dRpneP9JRRXWSkPvjAW13oZiAiQIXpd+b5Qv7ZXYd8udORoaqy0bVljw3fkIpthK4UttVYobBafnBEb4SnChY9OTqwHB84ie/jRliGYYv3y9B68XNAOoPXjKKvSoDcBpPWARSxnD84xlAx2RuSMa/no1LXY4StF2WbrTwauzZPbY4gHGF58lcH2t0eJeMdJDTfEiSlKOh+5nVVlnAE6MdJ94Fu+mC4A+GjDPPWRB9yE6Njy0rjuEp5hICp4sIKeE/RyYdpjDvqOw1uBJVvjy7R4Fm+7rNECE3SLriK1vQqheHyyLq4Ol6UOvWNlJQ5whxANCqFRbPVYt/oGsVon1hILE9sXxNN5c7aRJlestevMU5YdfbG6dIiXL5HUW4kzVqdfe5REAZh30tDl+x9stCbYyK6a1hoau54+DJYLQZ6ENjl6EBaN5AShbHM2UQc1FKoCh2S0p3Z5p2DsDaXVEV4ljFP2I57GKnIzYEkR8NHUFvzxo8Q2Le87GTGDScximh6u0Jfv4gkoqfPgVhhhehX3abYEeihNgiQ/378HSOuJ9cGFG6Y8+oupZ1URjt1muoEgc=
-  matrix:
-  - TARGET=amd64
-  - TARGET=arm
-  - TARGET=arm64
-  - TARGET=ppc64le
-  - TARGET=s390x
-
-matrix:
-  fast_finish: true
-  include:
-  - os: windows
-    env: TARGET=amd64
-    go: 1.10.x
-  - os: windows
-    env: TARGET=amd64
-    go: 1.11.x
 
 install:
 - go get github.com/onsi/ginkgo/ginkgo

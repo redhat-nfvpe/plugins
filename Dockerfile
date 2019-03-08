@@ -9,7 +9,7 @@ RUN rpm --import https://mirror.go-repo.io/centos/RPM-GPG-KEY-GO-REPO && \
     yum install -y $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     cd /usr/src/plugins && \
-    ./build.sh && \
+    ./build_linux.sh && \
     yum autoremove -y $INSTALL_PKGS && \
     yum clean all && \
     rm -rf /tmp/*
